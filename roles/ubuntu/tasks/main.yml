@@ -2,7 +2,7 @@
 - name: Check if Ubuntu distribution
   ansible.builtin.assert:
     that:
-      - ansible_distribution == "Ubuntu"
+      - ansible_facts["distribution"] == "Ubuntu"
 
 - name: Remove unattended upgrades package
   become: true

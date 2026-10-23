@@ -1,8 +1,8 @@
 ---
 - name: Gather distribution facts
   when:
-    - ansible_distribution is not defined or
-      ansible_os_family is not defined
+    - ansible_facts["distribution"] is not defined or
+      ansible_facts["os_family"] is not defined
   ansible.builtin.setup:
     gather_subset:
       - '!all'
@@ -12,13 +12,13 @@
 - name: Check if Fedora based distribution
   ansible.builtin.assert:
     that:
-      - ansible_distribution == "Fedora"
+      - ansible_facts["distribution"] == "Fedora"
     fail_msg: This role is only supported on Fedora.
     success_msg: This role is supported on Fedora.
 
 - name: Warning for Fedora pre-41
   when:
-    - ansible_distribution_major_version | int < 41
+    - ansible_facts["distribution_major_version"] | int < 41
   ansible.builtin.debug:
     msg: This role is only tested on Fedora 41 and later. Versions prior to Fedora 41 may not work as expected.
 

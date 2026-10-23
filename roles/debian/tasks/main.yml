@@ -2,7 +2,7 @@
 - name: Check if Debian distribution
   ansible.builtin.assert:
     that:
-      - ansible_distribution == "Debian"
+      - ansible_facts["distribution"] == "Debian"
 
 - name: Install GPG utility
   become: true

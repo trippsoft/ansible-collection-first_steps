@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2026-10-23
+
+### Role - debian
+
+- Changed fact reference to use `ansible_facts` map instead of injected variable, which is deprecated.
+
+### Role - fedora
+
+- Changed fact reference to use `ansible_facts` map instead of injected variable, which is deprecated.
+
+### Role - rhel
+
+- Changed fact reference to use `ansible_facts` map instead of injected variable, which is deprecated.
+
+### Role - ubuntu
+
+- Changed fact reference to use `ansible_facts` map instead of injected variable, which is deprecated.
+
 ## [1.1.4] - 2025-06-10
 
 ### Collection
