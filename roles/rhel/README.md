@@ -1,7 +1,7 @@
 <!-- BEGIN_ANSIBLE_DOCS -->
 
 # Ansible Role: trippsc2.first_steps.rhel
-Version: 1.1.4
+Version: 1.2.0
 
 This role performs first steps on a freshly installed RHEL-based system.
 
