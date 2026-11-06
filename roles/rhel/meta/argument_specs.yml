@@ -43,3 +43,9 @@ argument_specs:
         description:
           - System purpose sync.
           - Required for RHEL only.
+      rhel_use_firewalld:
+        type: bool
+        required: false
+        default: true
+        description:
+          - Whether the machine uses firewalld.

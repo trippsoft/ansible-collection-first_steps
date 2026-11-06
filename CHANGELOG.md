@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0] - 2026-11-05
+
+### Role - rhel
+
+- Add option to not use firewalld.
+
 ## [1.2.0] - 2026-10-23
 
 ### Role - debian

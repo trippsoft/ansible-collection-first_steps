@@ -73,15 +73,33 @@
     state: present
     reload: true
 
-- name: Remove unnecessary services
-  loop:
-    - cockpit
-    - dhcpv6-client
-  become: true
-  ansible.posix.firewalld:
-    service: "{{ item }}"
-    permanent: true
-    state: disabled
+- name: Configure firewalld
+  when:
+    - rhel_use_firewalld
+  block:
+    - name: Ensure firewalld is installed
+      become: true
+      ansible.builtin.dnf:
+        name:
+          - firewalld
+        state: present
+
+    - name: Ensure firewalld is running and enabled
+      become: true
+      ansible.builtin.systemd_service:
+        name: firewalld.service
+        state: started
+        enabled: true
+
+    - name: Remove unnecessary services
+      loop:
+        - cockpit
+        - dhcpv6-client
+      become: true
+      ansible.posix.firewalld:
+        service: "{{ item }}"
+        permanent: true
+        state: disabled
 
 - name: Update all packages
   become: true
