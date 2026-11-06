@@ -1,7 +1,7 @@
 <!-- BEGIN_ANSIBLE_DOCS -->
 
 # Ansible Role: trippsc2.first_steps.fedora
-Version: 1.2.0
+Version: 1.3.0
 
 This role performs first steps on a freshly installed Fedora system.
 
