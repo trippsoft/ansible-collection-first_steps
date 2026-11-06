@@ -1,7 +1,7 @@
 <!-- BEGIN_ANSIBLE_DOCS -->
 
 # Ansible Role: trippsc2.first_steps.rhel
-Version: 1.2.0
+Version: 1.3.0
 
 This role performs first steps on a freshly installed RHEL-based system.
 
@@ -9,7 +9,7 @@ This role performs first steps on a freshly installed RHEL-based system.
 
 | Platform | Versions |
 | -------- | -------- |
-| EL | <ul><li>9</li><li>8</li></ul> |
+| EL | <ul><li>10</li><li>9</li><li>8</li></ul> |
 
 ## Dependencies
 
@@ -27,6 +27,7 @@ This role performs first steps on a freshly installed RHEL-based system.
 | rhel_subscription_syspurpose_usage | <p>System purpose usage.</p><p>Required for RHEL only.</p> | str | no |  |  |
 | rhel_subscription_syspurpose_service_level_agreement | <p>System purpose service level agreement.</p><p>Required for RHEL only.</p> | str | no |  |  |
 | rhel_subscription_syspurpose_sync | <p>System purpose sync.</p><p>Required for RHEL only.</p> | bool | no |  |  |
+| rhel_use_firewalld | <p>Whether the machine uses firewalld.</p> | bool | no |  | `True` |
 
 
 ## License
